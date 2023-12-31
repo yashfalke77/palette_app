@@ -3,5 +3,5 @@ export default function Home() {
     <main >
       Yooo
     </main>
-  )
+  );
 }
