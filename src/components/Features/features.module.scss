@@ -49,7 +49,7 @@
     }
 
     &Badge {
-      @apply text-sm absolute font-bold px-[0.3rem] rounded-md top-0 right-[1.9rem] uppercase;
+      @apply text-[0.6rem] absolute font-bold px-[0.3rem] rounded-sm top-0 right-[1.9rem] uppercase;
 
       &--1 {
         @apply text-[#daab00] bg-[#fdf3ce];
