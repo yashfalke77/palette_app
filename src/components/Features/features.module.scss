@@ -1,0 +1,139 @@
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  80% {
+    transform: translateY(0rem);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.services {
+  @apply min-h-[42rem] px-[1.9rem] py-[5.6rem];
+
+  &__head {
+    @apply max-w-[44rem] mx-auto text-center mb-[5rem];
+  }
+
+  &__headingPrimary {
+    @apply font-black text-[3rem] leading-[1.1em] tracking-tighter mb-[0.6rem];
+  }
+
+  &__description {
+    @apply text-[#464853] leading-[1.4em] text-[1.1rem];
+  }
+
+  &__body {
+    @apply grid gap-[1.9rem];
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  &__headingSecondary {
+    @apply font-extrabold text-[1.9rem] leading-[1.1em];
+  }
+
+  &__headingTertiary {
+    @apply font-extrabold text-[1.5rem] leading-[1.1em];
+  }
+
+  &__card {
+    @apply flex flex-col justify-center items-center text-center bg-[#f7f7f8] rounded-[14px] w-full h-[18.8rem] cursor-pointer mr-[1rem] mb-[1.9rem];
+
+    &Outer {
+      @apply flex flex-col justify-center items-center relative p-[1.9rem] w-full;
+    }
+
+    &Badge {
+      @apply text-sm absolute font-bold px-[0.3rem] rounded-md top-0 right-[1.9rem] uppercase;
+
+      &--1 {
+        @apply text-[#daab00] bg-[#fdf3ce];
+      }
+
+      &--2 {
+        @apply text-[#802fde] bg-[#e8e2f7];
+      }
+
+      &--3 {
+        @apply text-[#14b789] bg-[#d5f8ef];
+      }
+
+      &--4 {
+        @apply text-[#e71591] bg-[#ffe5f4];
+      }
+
+      &--5 {
+        @apply text-[#00aee5] bg-[#d8f6ff];
+      }
+    }
+
+    &Inner {
+      @apply hidden w-0 p-[1.9rem];
+    }
+
+    &Icon {
+      @apply fill-black w-[3.4rem] h-[2.8rem] mb-[1rem];
+    }
+
+    &Description {
+      @apply text-[#464853] mt-[1rem] text-base leading-[1.7em];
+    }
+
+    &:hover &Inner {
+      @apply inline-block w-full;
+      animation-name: moveInTop;
+      animation-duration: 0.5s;
+    }
+
+    &:hover &Outer {
+      @apply hidden w-0;
+    }
+
+    &--1:hover {
+      background-color: #fdf3ce;
+    }
+
+    &--2:hover {
+      background-color: #e8e2f7;
+    }
+
+    &--3:hover {
+      background-color: #d5f8ef;
+    }
+
+    &--4:hover {
+      background-color: #ffe5f4;
+    }
+
+    &--5:hover {
+      background-color: #d8f6ff;
+    }
+
+    &Hover {
+      &--1 {
+        @apply text-[#daab00];
+      }
+
+      &--2 {
+        @apply text-[#802fde];
+      }
+
+      &--3 {
+        @apply text-[#14b789];
+      }
+
+      &--4 {
+        @apply text-[#e71591];
+      }
+
+      &--5 {
+        @apply text-[#00aee5];
+      }
+    }
+  }
+}
