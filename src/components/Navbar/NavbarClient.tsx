@@ -12,7 +12,7 @@ import { Session, createClientComponentClient } from '@supabase/auth-helpers-nex
 import { useRouter } from 'next/navigation';
 import { Avatar, AvatarFallback, AvatarImage } from '../ShadcnUi/Avatar';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '../ShadcnUi/DropdownMenu';
-// import toast from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const NavbarClient = ({ session }: { session: Session | null }) => {
   const supabase = createClientComponentClient();
@@ -32,17 +32,17 @@ const NavbarClient = ({ session }: { session: Session | null }) => {
 
   const logout = async () => {
     await supabase.auth.signOut();
-    // toast.success('Logged out Successfully! ', {
-    //   style: {
-    //     borderRadius: '100px',
-    //     background: '#000',
-    //     paddingLeft: '16px',
-    //     paddingRight: '16px',
-    //     paddingTop: '10px',
-    //     paddingBottom: '10px',
-    //     color: '#fff',
-    //   },
-    // });
+    toast.success('Logged out Successfully! ', {
+      style: {
+        borderRadius: '100px',
+        background: '#000',
+        paddingLeft: '16px',
+        paddingRight: '16px',
+        paddingTop: '10px',
+        paddingBottom: '10px',
+        color: '#fff',
+      },
+    });
     router.refresh();
   };
 
@@ -50,7 +50,7 @@ const NavbarClient = ({ session }: { session: Session | null }) => {
     <nav className={styles.nav}>
       <div className={styles.nav__left}>
         <Link className={styles.nav__logo} href='/'>
-          palette
+          Palette
         </Link>
       </div>
 
