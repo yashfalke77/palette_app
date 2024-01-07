@@ -17,7 +17,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        'inter': ['Inter', 'sans-serif']
+        'inter': ['Inter', 'sans-serif'],
+        'pacifio': ['Pacifico', 'cursive'],
       },
       fontSize: {
         base: '1rem',
